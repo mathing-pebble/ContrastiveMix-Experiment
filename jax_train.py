@@ -41,11 +41,11 @@ def main():
         and os.listdir(training_args.output_dir)
         and training_args.do_train
         and not training_args.overwrite_output_dir
-):
-    raise ValueError(
-        f"Output directory ({training_args.output_dir}) already exists and is not empty. "
-        f"Use --overwrite_output_dir to overcome."
-    )
+        ):
+        raise ValueError(
+            f"Output directory ({training_args.output_dir}) already exists and is not empty. "
+            f"Use --overwrite_output_dir to overcome."
+        )
 
     # Setup logging
     logging.basicConfig(
